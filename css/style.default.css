@@ -1,0 +1,388 @@
+/********** 1. FILE IMPORTS **********/
+
+
+@import url('bootstrap.min.css');
+@import url('jquery-ui-1.10.3.css');
+@import url('font-awesome.min.css');
+
+/********** 2. RESET STYLES **********/
+
+
+body {
+    background: #1d2939;
+    font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif !important;
+    line-height: 21px;
+    color: #636e7b;
+}
+
+body.notfound,
+body.signin {
+    background: #fafafa;
+}
+
+input,
+select,
+textarea {
+    font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif !important;
+    color: #636e7b;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
+}
+
+strong {
+    font-family: 'LatoBold';
+    font-weight: normal;
+}
+
+.signinpanel {
+    width: 780px;
+    margin: 10% auto 0 auto;
+}
+
+.signinpanel .logopanel {
+    float: none;
+    width: auto;
+    padding: 0;
+    background: none;
+}
+
+.signinpanel .signin-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.signinpanel .form-control {
+    display: block;
+    margin-top: 15px;
+}
+
+.signinpanel .uname {
+    background: #fff url(../images/user.png) no-repeat 95% center;
+}
+
+.signinpanel .pword {
+    background: #fff url(../images/locked.png) no-repeat 95% center;
+}
+
+.signinpanel .btn {
+    margin-top: 15px;
+}
+
+.signinpanel form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -moz-box-shadow: 0 3px 0 rgba(12, 12, 12, 0.03);
+    -webkit-box-shadow: 0 3px 0 rgba(12, 12, 12, 0.03);
+    box-shadow: 0 3px 0 rgba(12, 12, 12, 0.03);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 30px;
+}
+
+.signinpanel form a {
+    color: #666;
+}
+
+
+.signuppanel {
+    margin: 5% auto 0 auto;
+    width: 780px;
+}
+
+.signuppanel .row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.signuppanel .logopanel {
+    float: none;
+    width: auto;
+    padding: 0;
+    background: none;
+}
+
+.signuppanel .col-sm-6,
+.signuppanel .col-sm-5,
+.signuppanel .col-sm-3,
+.signuppanel .col-sm-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.signuppanel .signup-info {
+    padding-right: 20px;
+}
+
+.signuppanel form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -moz-box-shadow: 0 3px 0 rgba(12, 12, 12, 0.03);
+    -webkit-box-shadow: 0 3px 0 rgba(12, 12, 12, 0.03);
+    box-shadow: 0 3px 0 rgba(12, 12, 12, 0.03);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 30px;
+}
+
+
+
+
+
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.mr30 {
+    margin-right: 30px;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.nomargin {
+    margin: 0;
+}
+
+.noshadow {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.border-right-0 {
+    border-right: 0;
+}
+
+.border-left-0 {
+    border-left: 0;
+}
+
+.nopadding {
+    padding: 0 !important;
+}
+
+.padding-top-0 {
+    padding-top: 0;
+}
+
+.padding5 {
+    padding: 5px;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.serif {
+    font-family: 'Georgia, serif';
+}
+
+.italic {
+    font-style: italic;
+}
+
+.dark {
+    color: #333;
+}
+
+.width100p {
+    width: 100%;
+}
+
+.width20 {
+    width: 20px;
+}
+
+.width30 {
+    width: 30px;
+}
+
+.inblock {
+    display: inline-block;
+}
+
+
+/********** 18. MEDIA QUERIES **********/
+
+
+/***************************************/
+
+@media screen and (max-width: 1024px) {
+    body {
+        position: relative;
+    }
+    .leftpanel {
+        display: none;
+    }
+    .mainpanel {
+        margin-left: 0;
+        width: 100%;
+    }
+    .leftpanel-collapsed .leftpanel {
+        display: none;
+    }
+    .leftpanel-collapsed .mainpanel {
+        margin-left: 0;
+    }
+    .leftpanel-collapsed .headerbar {
+        margin-left: 0;
+    }
+    .leftpanel-show section {
+        overflow-x: hidden;
+    }
+    .leftpanel-show .leftpanel {
+        display: block;
+    }
+    .leftpanel-show .mainpanel {
+        margin-left: 240px;
+    }
+    .stickyheader .headerbar {
+        left: 0;
+    }
+    .stickyheader.leftpanel-show .headerbar {
+        left: 240px;
+    }
+    .stickyheader.chat-relative-view .headerbar {
+        right: 240px;
+        left: auto;
+    }
+    .stickyheader .header-right {
+        margin-right: 0;
+    }
+    .btn-demo {
+        margin-bottom: 20px;
+    }
+    .leftpanelinner {
+        padding: 5px 10px;
+    }
+    .leftpanelinner .searchform input {
+        background: #131b26;
+        border: 0;
+    }
+    /* horizontal menu related */
+    .nav-horizontal {
+        position: relative;
+    }
+    .horizontal-menu .menutoggle {
+        display: block;
+    }
+    .horizontal-menu .headerbar .logopanel {
+        display: none;
+    }
+    .nav-horizontal .caret {
+        display: none;
+    }
+    .horizontal-menu .header-left,
+    .horizontal-menu .topnav {
+        float: none;
+    }
+    .horizontal-menu-sidebar .header-left,
+    .horizontal-menu-sidebar .topnav {
+        float: none;
+    }
+    .fixed-noleft .menutoggle {
+        display: block;
+    }
+    .fixed-noleft .headerbar .logopanel {
+        display: none;
+    }
+    .fixed-noleft .header-left,
+    .fixed-noleft .topnav {
+        float: none;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    .signinpanel,
+    .signuppanel {
+        margin: 0 auto;
+        width: 480px;
+        padding: 20px;
+    }
+    .signinpanel form {
+        margin-top: 20px;
+    }
+    .signup-footer {
+        margin-bottom: 10px;
+    }
+    .signuppanel .form-control {
+        margin-bottom: 10px;
+    }
+    .signup-footer .pull-left,
+    .signup-footer .pull-right {
+        float: none !important;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .signinpanel,
+    .signuppanel {
+        width: 360px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .pageheader h2 span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .signinpanel,
+    .signuppanel {
+        width: 310px;
+    }
+}
